@@ -15,12 +15,17 @@ function numberToString(num){
  * @return {number}
  */
 
+function increase(num){
+  var newNum = num + 1;
+  return newNum;
+}
 
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
+
 
 
 /**
