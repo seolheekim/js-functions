@@ -26,7 +26,10 @@ function increase(num){
  * @return {number}
  */
 
-
+function decrease(num){
+  var newSubNum = num - 1;
+  return newSubNum;
+}
 
 /**
  * Adds two numbers.
@@ -35,6 +38,10 @@ function increase(num){
  * @return {number} the sum
  */
 
+function add(num1, num2){
+  var addNum = num1 + num2;
+  return addNum;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -43,6 +50,10 @@ function increase(num){
  * @return {number} the difference
  */
 
+function subtract(num1, num2){
+  var subNum = num1 - num2;
+  return subNum;
+}
 
 /**
  * Multiplies two numbers.
@@ -50,6 +61,11 @@ function increase(num){
  * @param {number} y
  * @return {number} the product
  */
+
+ function multiply(num1, num2){
+  var multNum = num1 * num2;
+  return multNum;
+ }
 
 
 /**
@@ -59,6 +75,10 @@ function increase(num){
  * @return {number} the quotient
  */
 
+function divide(num1, num2){
+  var divNum = num1 / num2;
+  return divNum;
+}
 
 /**
  * Multiplies a number by itself.
@@ -66,6 +86,11 @@ function increase(num){
  * @return {number} squared
  */
 
+function square(num){
+  var x = 0
+  var squNum = x * num;
+  return squNum;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
