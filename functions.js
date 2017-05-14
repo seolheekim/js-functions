@@ -87,9 +87,8 @@ function divide(num1, num2){
  */
 
 function square(num){
-  var x = 0
-  var squNum = x * num;
-  return squNum;
+  var squareNum = num * num;
+  return squareNum;
 }
 
 /**
@@ -101,6 +100,15 @@ function square(num){
  * @return {number} the result
  */
 
+function calculate(num1, num2){
+  var operation = {
+    add: num1 + num2,
+    subtract: num1 - num2,
+    multiply: num1 * num2,
+    divide: num1 / num2
+  };
+
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -109,6 +117,13 @@ function square(num){
  * @return {boolean} `a` is larger than `b`
  */
 
+function isGreaterThan(a, b){
+  if(a > b){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -117,6 +132,13 @@ function square(num){
  * @return {boolean} `a` is smaller than `b`
  */
 
+function isLessThan(a, b){
+  if(a < b){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -125,6 +147,13 @@ function square(num){
  * @return {boolean} the numbers are equal
  */
 
+function areEqual(a, b){
+  if(a = b){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /**
  * Returns the smallest value of two numbers.
