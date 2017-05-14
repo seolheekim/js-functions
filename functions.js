@@ -6,8 +6,9 @@
 
 function numberToString(num){
   return num.toString();
-
 }
+
+//
 
 /**
  * Adds one to a given number.
@@ -19,6 +20,11 @@ function increase(num){
   var newNum = num + 1;
   return newNum;
 }
+
+//  function increase(num){
+//    return num++;
+//    return num + 1;
+//  }
 
 /**
  * Subtracts one from a given number.
@@ -91,6 +97,8 @@ function square(num){
   return squareNum;
 }
 
+// also can do "return num * num" or "return Math.pow(x, 2)"
+
 /**
  * Performs a mathematical operation on two numbers.
  * Also prints out the equation: (i.e.) "1 + 5 = 6" or "8 / 2 = 4".
@@ -100,13 +108,19 @@ function square(num){
  * @return {number} the result
  */
 
-function calculate(num1, num2){
-  var operation = {
-    add: num1 + num2,
-    subtract: num1 - num2,
-    multiply: num1 * num2,
-    divide: num1 / num2
-  };
+function calculate(operator, x, y){
+  switch (operator) {
+    case "add":
+      return add(x, y);
+    case "subtract":
+      return subtract(x, y);
+    case "multiply":
+      return multiply(x, y);
+    case "divide":
+      return divide(x, y);
+    default:
+      return;
+  }
 
 }
 
@@ -140,6 +154,8 @@ function isLessThan(a, b){
   }
 }
 
+// you can also do "return a < b"
+
 /**
  * Returns true if `a` and `b` are equal.
  * @param {number} a
@@ -148,7 +164,7 @@ function isLessThan(a, b){
  */
 
 function areEqual(a, b){
-  if(a = b){
+  if(a === b){
     return true;
   }else{
     return false;
@@ -162,6 +178,32 @@ function areEqual(a, b){
  * @return {number} the smallest number
  */
 
+function minimum(x, y){
+  return Math.min(x, y);
+}
+
+//ex#1
+//if (x < y){
+//   return x;
+// }else {
+//   return y;
+// }
+
+//ex#2
+
+function minimum(x,y){
+  if(isLessThan(x,y)){
+    return x;
+  }else{
+    return y;
+  }
+  if(isGreaterThan(x,y)){
+    return y;
+  }else{
+    return x;
+  }
+}
+
 
 /**
  * Returns the largest value of two numbers.
@@ -170,12 +212,24 @@ function areEqual(a, b){
  * @return {number} the largest number
  */
 
+function maximum(x, y){
+  return Math.max(x, y);
+}
 
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
+
+function isEven(num){
+  if(num === num){
+    return true;
+  }else{
+    return false;
+  }
+
+}
 
 
 /**
@@ -184,7 +238,15 @@ function areEqual(a, b){
  * @return {boolean} the number is odd
  */
 
+function isOdd(num){
+  if(num % 2){
+    return true;
+  }else{
+    return false;
+  }
+}
 
+// you can do it "return !"
 /**
  * Returns a letter grade.
  * "A": 90-100%
@@ -197,6 +259,22 @@ function areEqual(a, b){
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade(score, total){
+  var percent = score / total;
+      if(percent >= 0.9){
+      return "A";
+    }else if(percent >= 0.8){
+      return "B";
+    }else if(percent >= 0.7){
+      return "C";
+    }else if(percent >= 0.6){
+      return "D";
+    }else{
+      return "F";
+    }
+  return percent;
+}
+
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -206,6 +284,15 @@ function areEqual(a, b){
  * @return {object} restaurant
  */
 
+function incrementReviews(restaurant){
+  if(restaurant.hasOwnProperty("reviews")){
+    restaurant.reviews++;
+  } else {
+    restaurant.reviews = 1;
+  }
+  return restaurant;
+
+}
 
 /**
  * Joins two strings with a space.
@@ -214,6 +301,12 @@ function areEqual(a, b){
  * @return {string} joined the words joined with a space
  */
 
+function combine(word1, word2){
+  return word1 + " " + word2;
+}
+
+//return word1.concat(" ", word2)
+// return [word1, word2].join(" ");
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -222,4 +315,13 @@ function areEqual(a, b){
  * @param {number} radius
  * @return {object} circle
  */
+
+ function createCircle(radius){
+  var circle = {};
+  circle.circumference = Math.PI*(radius*2);
+  circle.area = Math.PI*(radius*radius);
+  return circle;
+ }
+
+
 
