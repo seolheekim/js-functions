@@ -108,21 +108,30 @@ function square(num){
  * @return {number} the result
  */
 
-function calculate(operator, x, y){
-  switch (operator) {
-    case "add":
-      return add(x, y);
-    case "subtract":
-      return subtract(x, y);
-    case "multiply":
-      return multiply(x, y);
-    case "divide":
-      return divide(x, y);
-    default:
-      return;
-  }
+function calculate(operation, x, y){
+  var total;
+  var mathSymbols = " ";
 
+  if(operation === "add"){
+    total = x + y;
+    mathSymbols = " + ";
+  }
+  else if(operation === "subtract"){
+    total = x - y;
+    mathSymbols = " - ";
+  }
+  else if(operation === "multiply"){
+    total = x * y;
+    mathSymbols = " * ";
+  }
+  else if(operation === "divide"){
+    total = x * y;
+    mathSymbols; " / ";
+  }
+  console.log(x + mathSymbols + y + " = " + total);
+  return total;
 }
+
 
 /**
  * Returns true if `a` is greater than `b`.
